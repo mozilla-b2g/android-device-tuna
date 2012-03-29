@@ -60,7 +60,8 @@ PRODUCT_COPY_FILES := \
 	device/samsung/tuna/init.tuna.usb.rc:root/init.tuna.usb.rc \
 	device/samsung/tuna/ueventd.tuna.rc:root/ueventd.tuna.rc \
 	device/samsung/tuna/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/tuna/gps.conf:system/etc/gps.conf
+	device/samsung/tuna/gps.conf:system/etc/gps.conf \
+	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
@@ -123,8 +124,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
 	frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-	frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+	frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
 
 # HACK: copy panda init for now to boot on both boards
 PRODUCT_COPY_FILES += \
@@ -141,7 +141,6 @@ PRODUCT_COPY_FILES += \
 
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 PRODUCT_COPY_FILES += \
-	packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
 
 # file that declares the MIFARE NFC constant
 PRODUCT_COPY_FILES += \
