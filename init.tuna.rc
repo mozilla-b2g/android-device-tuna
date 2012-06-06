@@ -54,6 +54,7 @@ on fs
 	mkdir /factory 0775 radio radio
 	mount ext4 /dev/block/platform/omap/omap_hsmmc.0/by-name/system /system wait rw
 	chmod 0755 /system/b2g/b2g
+	chmod 0755 /system/b2g/plugin-container
 	chmod 0755 /system/b2g/updater
 	setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 	mount ext4 /dev/block/platform/omap/omap_hsmmc.0/by-name/userdata /data wait noatime nosuid nodev nomblk_io_submit,errors=panic
